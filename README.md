@@ -1,0 +1,29 @@
+<<<<<<< HEAD
+# isee-vue
+vue全家桶+echarts实现de的数据可视化项目
+=======
+# isee
+
+## Project setup
+```
+yarn install
+```
+
+### Compiles and hot-reloads for development
+```
+yarn serve
+```
+
+### Compiles and minifies for production
+```
+yarn build
+```
+
+### Lints and fixes files
+```
+yarn lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+>>>>>>> init
