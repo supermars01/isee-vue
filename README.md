@@ -1,6 +1,6 @@
-<<<<<<< HEAD
+
 # isee-vue
-vue全家桶+echarts实现de的数据可视化项目
+vue全家桶+echarts实现的数据可视化项目
 =======
 # isee
 
@@ -26,4 +26,3 @@ yarn lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
->>>>>>> init
