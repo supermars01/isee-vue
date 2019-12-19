@@ -1,10 +1,22 @@
 
 # isee-vue
-vue全家桶+echarts实现的数据可视化项目
-=======
-# isee
+这是一个vue全家桶+echarts实现的关于机构评价的数据可视化项目，是isee项目的升级版本
 
-## Project setup
+isee项目地址：https://github.com/xuxiaoyang/isee
+
+## 技术栈
+- Vue 2.x
+- Vue-Cli Vue的脚手架工具
+- Vue-Router 前端路由
+- Vuex 状态管理
+- Echarts 数据可视化库
+- Element 组件库
+- Axios 数据请求
+
+## 命令
+
+=======
+### Project setup
 ```
 yarn install
 ```
@@ -24,5 +36,4 @@ yarn build
 yarn lint
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+
