@@ -83,8 +83,7 @@
           >
             <template slot-scope="scope">
               <el-tag
-                :type="scope.row.tag==='国际'?'primary':'success'"
-                close-transition
+                :type="scope.row.tag==='国际'?'danger':'success'"
               >{{scope.row.tag}}</el-tag>
             </template>
           </el-table-column>
@@ -137,6 +136,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { Table,TableColumn,Drawer,Tag} from "element-ui"
 import * as echarts from "echarts/lib/echarts";
 import "echarts/lib/chart/gauge";
 import "echarts/lib/component/graphic";
@@ -154,7 +154,11 @@ export default {
     };
   },
   components: {
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer,
+    "el-tag":Tag
   },
   created() {
     this.$store.dispatch("initData", { name: "fushion" });
@@ -310,6 +314,7 @@ export default {
         width: 100%;
       }
     }
+  
     .el-container {
       margin: 0px 20px 0px 20px;
       .el-header {

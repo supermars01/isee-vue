@@ -50,6 +50,7 @@
 // @ is an alias to /src
 import CopyRight from "@/components/CopyRight.vue";
 import Doc from "../../public/docs/help.md";
+import {Drawer} from "element-ui"
 export default {
   name: "about",
   data() {
@@ -80,7 +81,8 @@ export default {
   },
   components: {
     Doc,
-    CopyRight
+    CopyRight,
+    'el-drawer':Drawer
   },
   mounted() {},
   methods: {
@@ -133,7 +135,7 @@ export default {
       text-align: justify;
       line-height: 2.5rem;
       width: cal(100vw - 240px);
-      padding: 0 100px;
+      padding: 0 30px;
       background: #fff;
       .header {
         margin: 4rem 0;

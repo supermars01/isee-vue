@@ -15,9 +15,6 @@
             <el-button type="primary" plain icon="el-icon-caret-bottom">继续了解</el-button>
           </a>
         </el-col>
-        <!-- <el-col :xs="24" :md="12" class="logo">
-          <Logo></Logo>
-        </el-col>-->
       </el-row>
     </div>
     <div class="funcModule" id="funcModule">
@@ -71,7 +68,6 @@ import papermatrix from "../../src/assets/paperMatrix.png";
 import patentmatrix from "../../src/assets/patentMatrix.png";
 import medical from "../../src/assets/medical.png";
 import fushion from "../../src/assets/fushion.png";
-import under from "../../src/assets/under.svg";
 import CopyRight from "../../src/components/CopyRight.vue";
 export default {
   name: "home",
@@ -82,8 +78,7 @@ export default {
       papermatrixUrl: papermatrix,
       patentmatrixUrl: patentmatrix,
       medicalUrl: medical,
-      fushionUrl: fushion,
-      underUrl: under
+      fushionUrl: fushion
     };
   },
   components: {
@@ -101,7 +96,7 @@ export default {
     text-align: center;
     margin: 4rem 0;
     .el-row {
-      width: 1200px;
+      width: 1120px;
       max-width: calc(100% - 2rem);
       margin: 0 auto;
       h1 {
@@ -111,8 +106,8 @@ export default {
       h3 {
         line-height: 3rem;
         font-size: 1rem;
-        font-weight: 500;
-        color: @font-primary-color;
+        font-weight: 400;
+        color: @font-color;
       }
       @media screen and (max-width: 992px) {
         h3 {
@@ -124,7 +119,7 @@ export default {
     }
   }
   .funcModule {
-    width: 1200px;
+    width: 1120px;
     max-width: calc(100% - 2rem);
     margin: 2rem auto;
     a {

@@ -37,7 +37,7 @@ export default {
 .footer {
   background-color: #fff;
   .el-row {
-    width: 1200px;
+    width: 1120px;
     max-width: calc(100% - 2rem);
     margin: 0 auto;
     text-align: left;

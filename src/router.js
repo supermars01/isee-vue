@@ -46,9 +46,8 @@ export default new Router({
       component: () => import('./views/MedicalWork.vue')
     },
     {
-      path:'/*',
-      name:'else',
-      redirect:'/'
+      path:'*',
+      component: Home
     }
   ]
 })

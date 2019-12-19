@@ -21,7 +21,7 @@ export default new Vuex.Store({
     },payload) {
       Vue.axios.get(`../data/${payload.name}.csv`).then(response => {
         commit('initData', {
-          "db": response.data.split('\n')
+          "db": response.data.split('\r\n')
         });
       })
     }

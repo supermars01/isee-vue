@@ -135,6 +135,7 @@ import "echarts/lib/chart/scatter";
 import "echarts/lib/coord/Axis";
 import "echarts/lib/component/markLine";
 import "echarts/lib/component/markArea";
+import { Table,TableColumn,Drawer} from "element-ui"
 import "echarts/lib/component/tooltip";
 import CopyRight from "@/components/CopyRight.vue";
 export default {
@@ -148,7 +149,10 @@ export default {
     };
   },
   components:{
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer
   },
   created() {
     this.$store.dispatch("initData", { name: "patentMatrix" });

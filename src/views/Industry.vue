@@ -5,8 +5,7 @@
       :icon="unfold?'el-icon-s-unfold':'el-icon-s-fold'"
       plain
       style="padding:10px 12px;font-size:20px"
-      class="hidden-lg-and-up"
-      :class="[unfold?'unfold':'fold']"
+      :class="['hidden-lg-and-up',unfold?'unfold':'fold']"
       @click="selectUnfold"
     ></el-button>
     <el-container>
@@ -104,6 +103,7 @@
 </template>
 
 <script>
+import { Table,TableColumn,Drawer} from "element-ui"
 import { mapGetters } from "vuex";
 import * as echarts from "echarts/lib/echarts";
 import "echarts/lib/chart/radar";
@@ -120,7 +120,10 @@ export default {
     };
   },
   components:{
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer
   },
   created() {
     this.$store.dispatch("initData", { name: "industry" });

@@ -98,6 +98,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { Table,TableColumn,Drawer} from "element-ui"
 import Vue from "vue";
 import * as echarts from "echarts/lib/echarts";
 import "echarts/lib/chart/map";
@@ -115,7 +116,10 @@ export default {
     };
   },
   components: {
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer
   },
   created() {
     this.$store.dispatch("initData", { name: "worldMap" });
@@ -208,7 +212,6 @@ export default {
               }),
               tooltip: {
                 formatter: params => {
-                  console.log(params);
                   return `${params.data.name}<br>合作次数${params.data.value}`;
                 },
                 backgroundColor: "rgba(255,255,255,0.8)",

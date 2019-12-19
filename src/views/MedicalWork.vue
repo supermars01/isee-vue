@@ -100,6 +100,7 @@
 
 <script>
 import { mapGetters } from "vuex";
+import { Table,TableColumn,Drawer} from "element-ui"
 import * as echarts from "echarts/lib/echarts";
 import "echarts/lib/chart/radar";
 import "echarts/lib/component/tooltip";
@@ -117,7 +118,10 @@ export default {
     };
   },
   components:{
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer
   },
   created(){
     this.$store.dispatch("initData", { name: "medicalWork" });

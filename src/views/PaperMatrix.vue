@@ -37,7 +37,7 @@
             filter-placement="bottom-end"
           >
             <template slot-scope="scope">
-              <el-tag :type="getType(scope)" close-transition>{{scope.row.tag}}</el-tag>
+              <el-tag :type="getType(scope.row.tag)" close-transition>{{scope.row.tag}}</el-tag>
             </template>
           </el-table-column>
         </el-table>
@@ -79,7 +79,7 @@
             filter-placement="bottom-end"
           >
             <template slot-scope="scope">
-              <el-tag :type="getType(scope)" close-transition>{{scope.row.tag}}</el-tag>
+              <el-tag :type="getType(scope)" close-transition></el-tag>
             </template>
           </el-table-column>
           
@@ -160,6 +160,7 @@
 <script>
 import { mapGetters } from "vuex";
 import * as echarts from "echarts/lib/echarts";
+import { Table,TableColumn,Drawer,Tag} from "element-ui"
 import "echarts/lib/chart/scatter";
 import "echarts/lib/coord/Axis";
 import "echarts/lib/component/markLine";
@@ -173,11 +174,22 @@ export default {
       elDrawer: false,
       unfold: true,
       currentRow: null,
-      currentData: []
+      currentData: [],
+      typeTag: {
+          "国际院校" : "success",
+          "世界一流" : "danger",
+          "区域核心" : "info",
+          "中国领先" : "warning",
+          "学科特色" : ""
+      }
     };
   },
   components:{
-    CopyRight
+    CopyRight,
+    "el-table":Table,
+    "el-table-column":TableColumn,
+    "el-drawer":Drawer,
+    "el-tag":Tag
   },
   created() {
     this.$store.dispatch("initData", { name: "paperMatrix" });
@@ -422,20 +434,9 @@ export default {
       }
     },
     getType() {
-      return scope => {
-        switch (scope.row.tag) {
-          case "国际院校":
-            return "primary";
-          case "世界一流":
-            return "success";
-          case "区域核心":
-            return "warning";
-          case "中国领先":
-            return "danger";
-          default:
-            return "info";
-        }
-      };
+      return function(ttag){
+        return this.typeTag[ttag]
+      }
     }
   }
 };
